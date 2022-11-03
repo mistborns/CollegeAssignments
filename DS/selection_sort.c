@@ -9,21 +9,16 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    printf("array is:\n");
-    for(int i = 0; i < size; i++)
-    {
-        printf("%d\t",arr[i]);
-    }
     for(int i = 0; i < size -1; i++)
     {
         min = i;
-        for(int j = i + 1 ; j < size - 1; j++)
+        for(int j = i + 1 ; j < size ; j++)
         {
             
             if( arr[min] > arr[j])
             {
                 temp = arr[j];
-                arr[j] = min;
+                arr[j] = arr[min];
                 arr[min] = temp;
             }
         }
@@ -36,4 +31,3 @@ int main()
     
     return 0;
 }
-
